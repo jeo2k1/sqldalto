@@ -1,0 +1,75 @@
+https://www.youtube.com/watch?v=DFg1V-rO6Pg&t=211s
+
+** MENU DEL CURSO DE SQL **
+
+0:00 - Introducción
+2:52 - Agradecimientos
+2:57 - Estructura del curso
+
+---- CONCEPTOS BÁSICOS DE SQL ----
+
+4:33 - Que es SQL
+6:48 - Historia de SQL
+8:18 - Para que sirve SQL
+11:50 - Modelo ER (Con Notación de Chen)
+18:30 - Ejercicios con Diagramas ER
+
+
+---- INSTALACIÓN Y CONFIGURACIÓN DEL ENTORNO ----
+
+24:36 - Instalación del Gestor (DBMS) en WINDOWS
+32:20 - Instalación del DB Browser en WINDOWS
+33:27 - Proceso de instalación en Linux (Opcional)
+
+
+-------  PRIMEROS PASOS  -------
+
+35:07 - Pronunciación correcta de SQL
+35:50 - Configurar DB Browser en Dark Mode
+36:29 - Crear base de datos 
+37:03 - Tablas, Campos y Registros
+41:12 - Creación de tablas
+47:49 - Primer consulta SELECT
+49:50 - Insertar registros con INSERT
+51:57 - Consultas (Queries)
+56:38 - Cláusula SELECT
+
+------ SECCIÓN BÁSICA ------
+
+58:41 - Identificadores
+1:13:28 - Claves Primaras y Foraneas
+1:18:34 - Diagrama para RELACIONAR TABLAS
+1:21:10 - Base de datos Northwind
+1:34:19 - Columnas y Alias
+1:41:24 - Ordenamiento con ORDER BY
+1:56:04 - Cláusula WHERE
+2:10:00 - AND, OR y NOT
+2:27:45 - Cláusula LIMIT (con ejercicios)
+2:35:17 - DISTINTO vs NOT
+2:49:25 - Operador Between
+2:59:09 - Operador LIKE 
+3:08:36 - IS NULL & IS NOT NULL
+3:12:19 - Operador IN y NOT IN
+
+-------- SECCIÓN INTERMEDIA ---------
+
+3:17:40 - Funciones de Agregación 
+3:24:12 - Comentarios 
+3:26:55 - GROUP BY y HAVING
+3:49:17 - Subconsultas (subqueries)
+4:26:35 - Ejercicio de subconsultas
+4:39:14 - Joins 
+5:06:46 - UNION y UNION ALL
+5:19:15 - Cardinalidad 
+5:39:00 - Normalización
+5:53:25 - Índices 
+6:15:28 - Vistas 
+
+--------- SECCIÓN AVANZADA ----------
+
+6:21:18 - Bloqueos y transacciones 
+6:31:44 - Procedimientos almacenados 
+6:35:54 - Funciones definidas por el usuario
+6:52:11 - Ejercicio final (SQL + Python)
+7:08:04 - Diferencias con otros DBMS
+7:18:06 - Escena Final 
