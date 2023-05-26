@@ -1,0 +1,48 @@
+***CREAR BASE DE DATOS
+    CREATE DATABASE "BASEUSUARIOS"
+
+***CREAR TABLA
+    CREATE TABLE "usuarios"{
+        "campo"    TEXT DEFAULT 'Jorge',
+        "id usuario"	INTEGER,
+        "nombre"	TEXT,
+        "apellido"	TEXT,
+        "edad"	INTEGER,
+        PRIMARY KEY("id usuario" AUTOINCREMENT)
+    };
+
+***CONSULTA PARA TRAER TODOS LOS REGISTROS
+    SELECT * FROM usuarios
+
+***INSERTAR 1 REGISTRO A LA TABLA
+    INSERT INTO usuarios (nombre, apellido, edad)
+    VALUES('Jorge','Orellana',45)
+
+***INSERTAR VARIOS REGISTROS A LA TABLA
+    INSERT INTO usuarios (nombre, apellido, edad)
+    VALUES('Pedro','Jorgelin',26),
+          ('Juan','Alvarez',16),
+          ('Roberto','Ntito',52)
+
+***CONSULTA POR CAMPOS ESPECIFICOS DE LA TABLA
+    SELECT apellido,edad FROM usuarios
+
+***BORRAR TODOS LOS REGISTROS DE UNA TABLA
+    DELETE FROM usuarios
+
+***MAS DE UNA CONSULTA (SEPARADA POR ;)
+    INSERT INTO usuarios (nombre, apellido, edad)
+    VALUES('Jorge','Orellana',45);
+	
+	SELECT * FROM usuarios
+ 
+***ALIAS
+    SELECT LastName AS apellido, FirstName AS nombre FROM Employees
+
+***OPERACION CON CAMPOS Y ASIGNA UN ALIAS
+    SELECT Price, Price*2 AS precio_doble FROM Products
+
+***ORDENAR
+    SELECT * FROM Products
+    ORDER BY Price ASC
+    ORDER BY Price DESC
