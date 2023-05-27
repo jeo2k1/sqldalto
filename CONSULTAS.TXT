@@ -93,4 +93,34 @@
     SELECT * FROM Products
     WHERE NOT Price > 40
 
-***
+***OPERADOR BETWEEN
+    SELECT * FROM Products WHERE Price BETWEEN 20 AND 40
+
+***OPERADOR LIKE
+    SELECT * FROM Employees WHERE LastName LIKE "Fuller"
+
+***OPERADOR LIKE CON COMODIN %
+    SELECT * FROM Employees WHERE LastName LIKE "F%"
+
+***OPERADOR LIKE CON COMODIN _
+    SELECT * FROM Employees WHERE LastName LIKE "Full__"
+
+***OPERADOR IS NULL
+    SELECT * FROM Products
+    WHERE ProductName IS NULL
+    ORDER BY ProductName ASC
+    
+***OPERADOR IS NOT NULL
+    SELECT * FROM Products
+    WHERE ProductName IS NOT NULL
+    ORDER BY ProductName ASC
+
+***OPERADOR IN
+    SELECT * FROM Products
+    WHERE SupplierID IN (3,4,5,6)
+
+
+***OPERADOR NOT IN
+    SELECT * FROM Products
+    WHERE SupplierID NOT IN (3,4,5,6)
+
