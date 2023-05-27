@@ -124,3 +124,27 @@
     SELECT * FROM Products
     WHERE SupplierID NOT IN (3,4,5,6)
 
+***FUNCION DE AGREGACION COUNT(), SUM(), AVG(), ROUND(), MIN(), MAX()
+    SELECT count(FirstName) AS Cantidad_de_nombres FROM  Employees
+    SELECT sum(Price) FROM Products
+    SELECT ROUND(AVG(Price),2) as promedio FROM Products
+    SELECT ProductName min(Price) FROM Products
+    SELECT ProductName MAX(Price) FROM Products
+
+***COMENTARIO EN SQL
+    -- comentario en SQL    
+
+***GROUP BY
+    SELECT CategoryID,round(AVG(Price)) as promedio FROM Products
+    WHERE CategoryID IS NOT NULL
+    GROUP BY CategoryID
+
+***GROUP HAVING
+    SELECT ProductID, SUM(Quantity) AS total FROM OrderDetails
+    GROUP BY ProductID
+    ORDER BY total DESC
+    LIMIT 1
+
+***
+
+***
