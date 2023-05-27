@@ -42,7 +42,55 @@
 ***OPERACION CON CAMPOS Y ASIGNA UN ALIAS
     SELECT Price, Price*2 AS precio_doble FROM Products
 
-***ORDENAR
+***ORDENAR ASCEDENTE Y DESCENDENTE
     SELECT * FROM Products
     ORDER BY Price ASC
     ORDER BY Price DESC
+
+***ORDENAR ASCEDENTE Y DESCENDENTE PONIENDO NULLS AL INICIO O AL FINAL
+    SELECT * FROM Products
+    ORDER BY ProductName ASC NULLS LAST
+
+***ORDENAR RANDOM
+    SELECT * FROM Products
+    ORDER BY RANDOM()
+
+***ORDENAR POR 2 CAMPOS
+    SELECT * FROM Products
+    ORDER BY ProductName, SupplierID DESC
+
+***MOSTRAR UN SOLO VALOR DE CADA COLUMNA
+    SELECT DISTINCT ProductName
+    FROM Products ORDER BY ProductName ASC
+
+***CLASUSULA WHERE
+    SELECT	ProductName FROM Products
+    WHERE ProductID = 14
+
+***ELIMINAR UN REGISTRO ESPECIFICO
+    DELETE FROM turnos_medicos
+    WHERE id_turno = 3
+
+*** ACTUALIZAR UN REGISTRO
+    UPDATE turnos_medicos
+    SET horario = "10:30"
+    motivo = "Dolor de muela"
+    WHERE id_turno = 2
+
+***CLASUSULA AND
+    SELECT * FROM Customers
+    WHERE  CustomerID >= 50 AND CustomerID < 55    
+
+***CLASUSULA OR
+    SELECT * FROM Employees
+    WHERE FirstName = "Nancy" OR FirstName = "Anne"
+
+***CLASUSULA OR y AND
+    SELECT * FROM Products
+    WHERE (Price < 20 OR CategoryID = 6) AND (SupplierID = 7)
+
+***CLASUSULA NOT
+    SELECT * FROM Products
+    WHERE NOT Price > 40
+
+***
