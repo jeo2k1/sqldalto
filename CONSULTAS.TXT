@@ -145,6 +145,59 @@
     ORDER BY total DESC
     LIMIT 1
 
-***
+***SUBSCONSULTAS
+    SELECT ProductID,
+            Quantity,
+            (SELECT ProductName FROM Products WHERE OD.ProductID = ProductID) AS nombre
+    FROM OrderDetails AS OD
+
+***EJERCICIO SUBSCONSULTAS
+    SELECT FirstName, LastName,
+    (SELECT SUM(OD.Quantity) FROM Orders AS O, OrderDetails AS OD
+    WHERE O.EmployeeID = E.EmployeeID AND OD.OrderID = O.OrderID) AS UNIDADES_TOTALES
+    FROM Employees AS E
+    WHERE UNIDADES_TOTALES < (SELECT AVG (UNIDADES_TOTALES) FROM (
+    SELECT (SELECT SUM(OD.Quantity) FROM Orders AS O, OrderDetails AS OD
+    WHERE O.EmployeeID = E2.EmployeeID AND OD.OrderID =O.OrderID) AS UNIDADES_TOTALES 
+    FROM Employees AS E2
+    GROUP BY E2.EmployeeID
+    ) )
+
+***JOINS, CROSS JOIN, INNER JOIN
+    --CROSS JOIN
+    SELECT LastName, FirstName, OrderID FROM Employees E
+
+
+    -- INNER JOIN
+    INNER JOIN ORDERS O ON E.EmployeeID = O.EmployeeID
+
+*** CREAR TABLA NUEVA
+    CREATE TABLE "Rewards" (
+        "Rewardid"	INTEGER,
+        "EmployeeID" INTEGER,
+        "Reward"	INTEGER,
+        "Month"		INTEGER,
+        PRIMARY KEY("Rewardid" AUTOINCREMENT)
+    )
+
+***LEFT JOIN
+    SELECT FirstName,Reward,Month FROM Employees E
+    LEFT JOIN Rewards R ON E.EmployeeID = R.EmployeeID
+
+***RIGTH JOIN (INVERTIMOS LAS TABLAS)
+    -- SIMULANDO UN RIGHT JOIN INVIRTIENDO LAS TABLAS Rewards Y Employees
+    SELECT FirstName,Reward,Month FROM Rewards R
+    LEFT JOIN Employees E ON E.EmployeeID = R.EmployeeID
+
+***FULL JOIN
+    -- SIMULANDO UN FULL JOIN UNIENDO UN LEFT JOIN CON UNA SIMULACION DE RIGHT JOIN
+    SELECT FirstName,Reward,Month FROM Employees E
+    LEFT JOIN Rewards R ON E.EmployeeID = R.EmployeeID
+
+    UNION
+
+    -- SIMULANDO UN RIGHT JOIN INVIRTIENDO LAS TABLAS Rewards Y Employees
+    SELECT FirstName,Reward,Month FROM Rewards R
+    LEFT JOIN Employees E ON E.EmployeeID = R.EmployeeID
 
 ***
