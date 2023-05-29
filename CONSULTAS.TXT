@@ -218,4 +218,47 @@
     MUCHOS A 1 (N:1)
     MUCHOS A MUCHOS (N:M) (SE USA TABLA INTERMEDIA)
 
-***
+***NORMALIZACION
+    1FN
+    2FN
+    3FN
+    4FN
+    https://es.wikipedia.org/wiki/Normalizaci%C3%B3n_de_bases_de_datos
+
+***INDICES
+    INDICES ORDINARIOS NO UNICOS (PERMITE DUPLICADOS Y VACIOS)
+    --creando un indice de Products
+    CREATE INDEX nombre ON Products (ProductName)
+
+    INDICES UNICOS (NO PERMITE DUPLICADOS)
+    --creando un indice name de Employees compuesto
+    CREATE UNIQUE INDEX name on Employees (FirstName, LastName)
+
+    EJERCICIO INDICES
+    *****************
+    SELECT * FROM OrderDetails od
+    INNER JOIN Orders o
+    WHERE o.OrderID = od.OrderID
+    AND OrderDate > "1996-07-04"
+    AND od.Quantity > 10
+
+    CREANDO INDICES
+    ***************
+    CREATE INDEX idx_orderdetails_quantity ON OrderDetails (Quantity);
+    CREATE INDEX idx_orders_ordersdate ON Orders(OrderDate)
+
+***VISTAS
+    CREATE VIEW Prodcutos_simplificados AS
+
+    SELECT ProductID, ProductName, Price FROM Products
+    WHERE ProductID > 20
+    ORDER BY ProductID DESC
+    
+    EJECUTAR VISTAS
+    ***************
+    SELECT * FROM Prodcutos_simplificados
+
+    ELIMINAR VISTAS
+    ***************
+    DROP VIEW IF EXISTS Prodcutos_simplificados
+    
