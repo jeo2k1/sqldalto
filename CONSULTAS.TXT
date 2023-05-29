@@ -189,7 +189,7 @@
     SELECT FirstName,Reward,Month FROM Rewards R
     LEFT JOIN Employees E ON E.EmployeeID = R.EmployeeID
 
-***FULL JOIN
+***FULL JOIN (UNION)
     -- SIMULANDO UN FULL JOIN UNIENDO UN LEFT JOIN CON UNA SIMULACION DE RIGHT JOIN
     SELECT FirstName,Reward,Month FROM Employees E
     LEFT JOIN Rewards R ON E.EmployeeID = R.EmployeeID
@@ -199,5 +199,23 @@
     -- SIMULANDO UN RIGHT JOIN INVIRTIENDO LAS TABLAS Rewards Y Employees
     SELECT FirstName,Reward,Month FROM Rewards R
     LEFT JOIN Employees E ON E.EmployeeID = R.EmployeeID
+
+
+***(UNION ALL)
+    -- SIMULANDO UN FULL JOIN UNIENDO UN LEFT JOIN CON UNA SIMULACION DE RIGHT JOIN
+    SELECT FirstName,Reward,Month FROM Employees E
+    LEFT JOIN Rewards R ON E.EmployeeID = R.EmployeeID
+
+    UNION ALL
+
+    -- SIMULANDO UN RIGHT JOIN INVIRTIENDO LAS TABLAS Rewards Y Employees
+    SELECT FirstName,Reward,Month FROM Rewards R
+    LEFT JOIN Employees E ON E.EmployeeID = R.EmployeeID
+
+***CARDINALIDAD
+    1 A 1 (1:1)
+    1 A MUCHOS (1:N)
+    MUCHOS A 1 (N:1)
+    MUCHOS A MUCHOS (N:M) (SE USA TABLA INTERMEDIA)
 
 ***
